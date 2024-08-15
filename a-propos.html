@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Page d'article contenant son titre , sa description, un tableau de données et des commentaires">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+
+    <title>Blog Nathan Bertaud</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:#ec7123">
+        <i data-toggle="collapse" onclick="openNav()" data-target="#sidebar" aria-controls="sidebar"
+            aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars"
+            style="color: white;font-size: 30px;"></i>
+
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex ">
+            <p class="h1 text-white">Blog Nathan Bertaud</p>
+        </div>
+        <div>
+            <a href="https://github.com/BertaudNathan?tab=repositories" class="text-white"><i class="fab fa-github"
+                    style="font-size: 30px;"></i></a>
+        </div>
+
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="article1.html">Presentation de Koalys</a>
+        <a href="article2.html">Presentation des technologies</a>
+        <a href="article3.html">Presentation des outils</a>
+        <a href="article4.html">Calendrier des rendez-vous</a>
+        <a href="article5.html">Fichiers dans la base Interlocuteurs</a>
+        <a href="article6.html">Petits projets</a>
+        <a href="article7.html">Bilan</a>
+    </div>
+    <main class="container mt-5 mb-5" style="    height: 70vh;">
+        <section class="contact-info">
+            <div class="row">
+                <div class="col">
+                    <h3>A propos de moi</h3>
+                    <p>Je m'appelle Nathan Bertaud, je suis étudiant en troisième année à Toulouse Ynov campus, dans la
+                        spécialité développement web. Je suis passionné par le développement, notamment web mais
+                        également d'application ou le game development.
+
+                        Je suis également passionné par le sport, et je pratique le judo depuis 16 ans maintenant et je
+                        fais également du VTT et du bmx race.
+                    </p>
+                </div>
+
+
+                <div class="col">
+                    <h3>Me contacter</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> Email: nathan.bertaud.25@gmail.com</li>
+                        <li><i class="fab fa-linkedin"></i> LinkedIn: <a
+                                href="https://www.linkedin.com/in/nathan-bertaud-nb31/">Profil LinkedIn </a></li>
+                        <li><i class="fas fa-file"></i> mon CV: <a href="public/CV_Nathan_Bertaud.pdf">CV</a>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+
+
+
+
+        <!-- pagination ends -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        jQuery.fn.tagName = function () {
+            return this.prop("tagName");
+        };
+
+        var opened = false;
+        function openNav() {
+            document.getElementById("mySidebar").style.borderRight = "1px solid white";
+            document.getElementById("mySidebar").style.width = "250px";
+
+            console.log(opened);
+            opened = true;
+
+        }
+
+        function closeNav() {
+
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mySidebar").style.borderRight = "none";
+            console.log(opened);
+            opened = false;
+
+        }
+
+        $(document).ready(function () {
+
+            $("main").on('click', function () {
+                if (opened == true) {
+                    closeNav();
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+        style="background:#ec7123 ">
+        <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+        <a title="Page Principale"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="public/logo.svg" alt="site's Logo" width="72" height="57" class="d-inline-block align-text-top">
+        </a>
+        <nav style="display: contents;">
+            <ul class="nav col-md-4 text-white justify-content-end">
+                <li class="text-white"><a href="index.html" style="
+                text-decoration: underline;
+            " class="text-white px-2 ">page de menu</a></li>
+                <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+                <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+                <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+                <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+                <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+                <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

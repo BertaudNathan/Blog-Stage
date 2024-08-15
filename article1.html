@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Page d'article contenant son titre , sa description, un tableau de données et des commentaires">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+
+    <title>Presentation de Koalys</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:#ec7123">
+        <i data-toggle="collapse"  onclick="openNav()" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars" style="color: white;font-size: 30px;"></i>
+
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex ">
+            <p class="h1 text-white">Presentation de Koalys</p>
+        </div>
+        <div>
+            <a href="https://github.com/BertaudNathan?tab=repositories" class="text-white"><i class="fab fa-github" style="font-size: 30px;"></i></a>
+        </div>
+
+    </header>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="article1.html">Presentation de Koalys</a>
+      <a href="article2.html">Presentation des technologies</a>
+      <a href="article3.html">Presentation des outils</a>
+      <a href="article4.html">Calendrier des rendez-vous</a>
+      <a href="article5.html">Fichiers dans la base Interlocuteurs</a>
+      <a href="article6.html">Petits projets</a>
+      <a href="article7.html">Bilan</a>
+  </div>
+    <main class="container mt-5 mb-5">
+        <h1 class="text-center">Presentation de l'entreprise Koalys</h1>
+        <article class="card md-5 p-2 border-black rounded shadow pb-2 pt-3">
+            <div class="images">
+                <img src="https://www.aleacontroles.com/uploads/tinyBrowser/images/Bloc_Marque_Al%C3%A9a_Contr%C3%B4les_Horizontal_HD_300.png?1534839847084"
+                    alt="logo aleacontroles">
+                <img src="https://www.diagamter.com/img/logo.png" alt="logo diagamter">
+
+
+            </div>
+            <p>Koalys rassemble deux entreprises : Diagamter et aleacontroles.</p>
+            <p>
+                Diagamter est une entreprise du secteur de l'immobilier, proposant des services a ses franchises. Elle
+                propose une expertise juridique et technique a des diagnostiqueur immobilier de son reseau, mais
+                egalement des solutions informatiques pour la gestion de CRM, de gestions et de creqtions de devis sur
+                le terrain, de supervision de la franchise.
+
+            </p>
+            <p>
+                Aleacontroles s'occupe egalement de devis, mais dans le secteur du BTP, de la renovation ou de la
+                construction de batiments.
+                Elle s'occupe aussi des formations, sur le desamiantage par exemple.
+
+            </p>
+            <p>
+                Le service informatique crée et gère les systemes pour diagamter et aleacontroles.
+
+                Il existe plusieurs projets :
+
+                Deux projets logiciel permettant la realisation des devis sur le terrain.
+
+                Plusieurs projet web pour les sites publics, les sites pour les franchises, le site carrieres et le site
+                de recrutement de nouveaux franchisés
+
+            </p>
+
+            <p>
+                En tant que stagiaire developpeur,
+                je vais essentiellement travailler sur deux projets : Le site public de diagamter et le site
+                mondiagamter, reservés au diagnostiqueurs du reseau diagamter.
+            </p>
+
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+jQuery.fn.tagName = function() {
+  return this.prop("tagName");
+};
+
+        var opened = false;
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("mySidebar").style.borderRight  = "1px solid white";
+          console.log(opened);
+          opened = true;
+          
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("mySidebar").style.borderRight  = "none";
+          console.log(opened);
+          opened = false;
+            
+        }
+
+        $(document).ready(function(){
+        
+          $("main").on('click', function(){
+            if (opened == true) {
+            closeNav();
+            }
+          });
+        });
+
+
+        
+        
+        </script>
+
+<footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+style="background:#ec7123">
+<p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+<nav style="display: contents;">
+    <ul class="nav col-md-4 text-white justify-content-end">
+        <li class="text-white"><a href="index.html" style="
+        text-decoration: underline;
+    " class="text-white px-2 ">page de menu</a></li>
+    <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
+        <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+        <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+        <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+        <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+        <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+        <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+    </ul>
+</nav>
+</footer>
+
+</body>
+
+</html>

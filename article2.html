@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Page d'article contenant son titre , sa description, un tableau de données et des commentaires">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+
+    <title>Les technologies utilisées</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:#ec7123">
+        <i data-toggle="collapse"  onclick="openNav()" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars" style="color: white;font-size: 30px;"></i>
+
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex ">
+            <p class="h1 text-white">Les technologies utilisées</p>
+        </div>
+        <div>
+            <a href="https://github.com/BertaudNathan?tab=repositories" class="text-white"><i class="fab fa-github" style="font-size: 30px;"></i></a>
+        </div>
+
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="article1.html">Presentation de Koalys</a>
+        <a href="article2.html">Presentation des technologies</a>
+        <a href="article3.html">Presentation des outils</a>
+        <a href="article4.html">Calendrier des rendez-vous</a>
+        <a href="article5.html">Fichiers dans la base Interlocuteurs</a>
+        <a href="article6.html">Petits projets</a>
+        <a href="article7.html">Bilan</a>
+    </div>
+    <main class="container mt-5 mb-5">
+        <h1 class="text-center">Presentation des technologies utilisées</h1>
+        <article class="card md-5 p-2 border-black rounded shadow pb-2 pt-3">
+           
+
+            <p>
+                Pour les differents projets informatiques de diagamter et aleacontroles, plusieurs technologies sont utilisées,
+                 pour le coté front-end , donc ce qui s'affiche pour l'utilisateur,le coté backend, ce qui se passe coté serveur, et pour les logiciels.
+                </p><p>           
+                 Pour les sites web, le developpement est fait en PHP, un langage de programmation tres utilisé pour les sites web. Cela a evolué avec le temps, notamment par l'utilisation d'un framework : Laravel.
+                 laravel est un framework basé sur le modele MVC, (modèle-vue-controller) qui permet de structurer le code de facon plus claire et plus lisible.
+                 Le paterne MVC est un paterne qui utilise la programmation orientée objet (POO), pour séparer le code du site en trois parties.
+                </p><p>            
+                 La premiere est le modèle, qui permet de definir pour chaque donnée differente, ce qu'il est possible de faire avec et de modifier. Ces données correspondent dans notre cas à nos differentes tables dans la base de données,
+                et les modèles rassemblent donc diffrentes methodes pour récuperer, modifier ou supprimer des données.
+            </p><p>
+                La deuxieme partie est la vue, qui correspond à ce que l'utilisateur voit sur le site. Ici on utilise un systeme de templates blade, 
+                qui permet de creer des bouts de codes qui vont s'inserer dans plusieurs autres template, comme un header ou un footer,
+                mais aussi de gerer la creation de page avec des données variables, des conditions ou des boucles, qui sont envoyées par le controlleur.
+            </p><p>
+                La derniere partie est donc le controlleur, qui va gerer les requetes de l'utilisateur, et renvoyer les bonnes vues avec les bonnes données.
+                Chaque fonction de nos controlleurs correspond à une route, qui est une url rentrée par l'utilisateur, et va faire le lien avec les modèles et renvoyer une vue avec des variables qui vont venir afficher le bon contenu à l'utlisateur.
+            </p><p>
+                Laravel prend en charge beaucoup d'autres aspects d'un service web.
+                Il existe un principe de middleware, qui permet de gerer les requetes avant qu'elles n'arrivent au controlleur, pour verifier par exemple si l'utilisateur est connecté, ou si il a les droits pour acceder à une page.
+                Il existe un ORM, qui permet de gerer les relations entre les tables de la base de donnée, et de creer des requetes plus facilement,
+                mais qui gere aussi un systeme de migrations, pour venir modifier les structures de notre BDD, de maniere propre et simple.
+                Il existe également des commandes, un systeme de cron, ...
+            </p><p>
+                Pour la partie front-end, on utilise avec les blade php du scss, un preprocesseur css, qui permet de créer des variables, des fonctions,... et de les compiler en css,
+                mais également boostrap, modifié pour correspondre à la DA diagamter.
+                On utilise également du javascript, principalement avec jquery, mais également plusieurs plugins, comme datatables ou fullcalendar, pour ameliorer l'experience utilisateur.
+            </p><p>
+                On utilise également differentes API, comme smsMode et mailjet, respectivement pour de l'envoie de SMS et de l'envoie de mail, mais aussi google maps et openstreetmap pour les cartes.
+            </p><p>
+                On utilise aussi elasticsearch, un moteur de recherche, pour permettre à l'utilisateur de trouver plus facilement des informations sur le site.
+                </p><p>
+
+                Pour les applications, on utilise du VBA pour la plus ancienne, et WPF pour la plus recente,
+                qui est un framework pour creer des applications windows, a laquel on rajoute telerik, un framework pour creer des interfaces graphiques plus facilement.           
+                </p>
+
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+jQuery.fn.tagName = function() {
+  return this.prop("tagName");
+};
+
+        var opened = false;
+        function openNav() {
+            document.getElementById("mySidebar").style.borderRight  = "1px solid white";
+          document.getElementById("mySidebar").style.width = "250px";
+        
+          console.log(opened);
+          opened = true;
+          
+        }
+        
+        function closeNav() {
+            
+          document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("mySidebar").style.borderRight  = "none";
+          console.log(opened);
+          opened = false;
+            
+        }
+
+        $(document).ready(function(){
+        
+          $("main").on('click', function(){
+            if (opened == true) {
+            closeNav();
+            }
+          });
+        });
+
+
+        
+        
+        </script>
+
+<footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+style="background:#ec7123">
+<p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+<nav style="display: contents;">
+    <ul class="nav col-md-4 text-white justify-content-end">
+        <li class="text-white"><a href="index.html" style="
+        text-decoration: underline;
+    " class="text-white px-2 ">page de menu</a></li>
+    <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
+        <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+        <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+        <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+        <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+        <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+        <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+    </ul>
+</nav>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Page d'article contenant son titre , sa description, un tableau de données et des commentaires">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+
+    <title>Blog Nathan Bertaud</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:#ec7123">
+        <i data-toggle="collapse" onclick="openNav()" data-target="#sidebar" aria-controls="sidebar"
+            aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars"
+            style="color: white;font-size: 30px;"></i>
+
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex ">
+            <p class="h1 text-white">Blog Nathan Bertaud</p>
+        </div>
+        <div>
+            <a href="https://github.com/BertaudNathan?tab=repositories" class="text-white"><i class="fab fa-github"
+                    style="font-size: 30px;"></i></a>
+        </div>
+
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="article1.html">Presentation de Koalys</a>
+        <a href="article2.html">Presentation des technologies</a>
+        <a href="article3.html">Presentation des outils</a>
+        <a href="article4.html">Calendrier des rendez-vous</a>
+        <a href="article5.html">Fichiers dans la base Interlocuteurs</a>
+        <a href="article6.html">Petits projets</a>
+        <a href="article7.html">Bilan</a>
+    </div>
+    <main class="container mt-5">
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Entreprise</p>
+                <h3 class="blog-title h3"> Presentation de Koalys</h3>
+                <p class="blog-description text-secondary">Presentation de Koalys <a href="article1.html"
+                        style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article1.html">
+                    <img src="public/logo-diagamter.png" class="blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Technologie</p>
+                <h3 class="blog-title h3">Les technologies utilisées</h3>
+                <p class="blog-description text-secondary">Presentation des technologies et languages &nbsp;<a
+                        href="article2.html" style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article2.html">
+                    <img src="public/laravel.png" class="blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Technologie</p>
+                <h3 class="blog-title h3">Les outils de developpement</h3>
+                <p class="blog-description text-secondary">Presentation des outils de developpement (workflow,
+                    integration, ...) &nbsp;<a href="article3.html" style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article3.html">
+                    <img src="public/mantis.png" class="blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Projet</p>
+                <h3 class="blog-title h3">Calendrier optimisé</h3>
+                <p class="blog-description text-secondary">Presentation d'un module aidant au placement de rendez vous
+                    pour les techniciens &nbsp;<a href="article4.html" style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article4.html">
+                    <img src="public/calendrier.png" class="blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Projet</p>
+                <h3 class="blog-title h3">Liaison de fichiers dans la base Interlocuteurs</h3>
+                <p class="blog-description text-secondary">Ajout de fichiers attachés aux interlocuteurs ou aux notes
+                    des interlocuteurs &nbsp;<a href="article5.html" style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article5.html">
+                    <img src="public/fichier.png" blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Projet</p>
+                <h3 class="blog-title h3">Petis projets</h3>
+                <p class="blog-description text-secondary"> Petits projets, correction de problèmes, ... &nbsp;<a href="article6.html" style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article6.html">
+                    <img src="public/fichier.png" blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+        <article class="row border border-black rounded blog mb-5 shadow-lg pb-2 pt-3"
+            style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+            <div class="col-md-8">
+                <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Projet</p>
+                <h3 class="blog-title h3">Bilan de stage</h3>
+                <p class="blog-description text-secondary"> Bilan de mon stage et transition vers l'alternance &nbsp;<a href="article7.html" style="color:#ec7123">Lire plus</a>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="article7.html">
+                    <img src="public/fichier.png" blog-img rounded shadow-lg" alt="article image"
+                        style="max-width: 100%">
+                </a>
+            </div>
+        </article>
+
+
+
+        <!-- pagination ends -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        jQuery.fn.tagName = function () {
+            return this.prop("tagName");
+        };
+
+        var opened = false;
+        function openNav() {
+            document.getElementById("mySidebar").style.borderRight = "1px solid white";
+            document.getElementById("mySidebar").style.width = "fit-content";
+
+            console.log(opened);
+            opened = true;
+
+        }
+
+        function closeNav() {
+
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mySidebar").style.borderRight = "none";
+            console.log(opened);
+            opened = false;
+
+        }
+
+        $(document).ready(function () {
+
+            $("main").on('click', function () {
+                if (opened == true) {
+                    closeNav();
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+        style="background:#ec7123">
+        <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+        <nav style="display: contents;">
+            <ul class="nav col-md-4 text-white justify-content-end">
+                <li class="text-white"><a href="index.html" style="
+                text-decoration: underline;
+            " class="text-white px-2 ">page de menu</a></li>
+            <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
+                <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+                <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+                <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+                <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+                <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+                <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

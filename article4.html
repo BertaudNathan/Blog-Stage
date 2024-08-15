@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Page d'article contenant son titre , sa description, un tableau de données et des commentaires">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+
+    <title>Projet : calendrier optimisé pour les rendez- vous</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:#ec7123">
+        <i data-toggle="collapse" onclick="openNav()" data-target="#sidebar" aria-controls="sidebar"
+            aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars"
+            style="color: white;font-size: 30px;"></i>
+
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex ">
+            <p class="h1 text-white">Projet : calendrier optimisé pour les rendez- vous</p>
+        </div>
+        <div>
+            <a href="https://github.com/BertaudNathan?tab=repositories" class="text-white"><i class="fab fa-github"
+                    style="font-size: 30px;"></i></a>
+        </div>
+
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="article1.html">Presentation de Koalys</a>
+        <a href="article2.html">Presentation des technologies</a>
+        <a href="article3.html">Presentation des outils</a>
+        <a href="article4.html">Calendrier des rendez-vous</a>
+        <a href="article5.html">Fichiers dans la base Interlocuteurs</a>
+        <a href="article6.html">Petits projets</a>
+        <a href="article7.html">Bilan</a>
+    </div>
+    <main class="container mt-5 mb-5">
+        <h1 class="text-center">Projet : calendrier optimisé pour les rendez- vous</h1>
+        <article class="card md-5 p-2 border-black rounded shadow pb-2 pt-3">
+
+            
+<p>
+Un des projets sur lesquels j'ai pu travailler est un calendrier, qui a pour but de prendre un rendez vous à placer dans le temps, en connaissant l'adresse, et à mettre tous les autres rendez vous en couleur en fonction de la distance avec le rendez vous à placer. Cela permet pour une secrétaire qui gère les tournée et les mises en place de rendez vous de se rendre compte facilement du meilleur endroit ou placer un nouveau rendez vous et à qui l'attribuer
+Il existe déjà un module de calendrier, que j'ai utilisé pour le nouveau calendrier.
+La tâche peut se séparer en plusieurs parties : 
+</p>
+<ul>
+
+    <li>
+créer tout ce qui est nécessaire dans laravel pour servir la nouvelle page, une route, une vue, un controller ou une fonction dans un controller déjà existant. Je vais créer les fonctions nécessaires dans le même contrôleur que l'autre calendrier, les fonctions étant similaires.
+</li><br><li>
+Récupérer l'adresse du rendez-vous à placer. Pour cela, la page de calendrier est disponible depuis un bouton de la page rendez-vous des missions (une mission est une commande de diagnostic est tout ce qui s'y rattache , devis, ordre de missions, interlocuteurs, techniciens, RDV,..). On a donc dans cette page l'ID du rendez-vous, qui nous permet dans le modèle de récupérer l'adresse associée.
+</li><br><li>
+Récupérer tous les autres rendez-vous. Pour cela, une requête dans la table rendez-vous avec l'id de la franchise  et une date supérieure ou égale à aujourd'hui comme condition suffi.
+</li><br><li>
+Calculer pour chaque rendez vous la distance avec notre rendez vous à placer. On utilise pour cela une api qui vient calculer la distance entre deux adresses, et on le stocke dans une table de la BDD. 
+</li><br><li>
+Afficher la couleur des rendez-vous . Pour chacun de ces rendez-vous, la distance calculée va correspondre a une couleur, qui va être utilisée comme fond de l'événement dans le calendrier, ou en gris par défaut si une erreur est survenue dans le calcul (adresse inexistante pour l'api par exemple).
+Permettre à l'utilisateur de changer les couleurs et les distances clé, en fonction de ce qui est significatif pour lui (10km en campagne ou en région parisienne ne correspond pas au même temps de déplacement)
+Afficher la légende, les techniciens des rendez vous déjà placés, la couleur de la distance entre l'adresse perso des techniciens et du rendez vous
+</li>
+</ul>
+
+
+
+
+
+
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        jQuery.fn.tagName = function () {
+            return this.prop("tagName");
+        };
+
+        var opened = false;
+        function openNav() {
+            document.getElementById("mySidebar").style.borderRight = "1px solid white";
+            document.getElementById("mySidebar").style.width = "250px";
+
+            console.log(opened);
+            opened = true;
+
+        }
+
+        function closeNav() {
+
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mySidebar").style.borderRight = "none";
+            console.log(opened);
+            opened = false;
+
+        }
+
+        $(document).ready(function () {
+
+            $("main").on('click', function () {
+                if (opened == true) {
+                    closeNav();
+                }
+            });
+        });
+
+
+
+
+    </script>
+     <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+     style="background:#ec7123">
+     <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+     <nav style="display: contents;">
+         <ul class="nav col-md-4 text-white justify-content-end">
+             <li class="text-white"><a href="index.html" style="
+             text-decoration: underline;
+         " class="text-white px-2 ">page de menu</a></li>
+         <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
+             <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+             <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+             <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+             <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+             <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+             <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+         </ul>
+     </nav>
+ </footer>
+
+</body>
+
+</html>

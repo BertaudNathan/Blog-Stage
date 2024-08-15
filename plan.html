@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title> Plan du site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page de plan du site montrant l'arborescence de celui-ci" >
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="scripts/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" href="public/logo.svg">
+  <script>
+    $(document).ready(function () {
+      $('.carousel').carousel({
+        interval: 4000
+      })
+    });    
+  </script>
+
+  <style>
+    a{
+        color: blue!important;
+    }
+  </style>
+
+</head>
+
+
+  <body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:rgb(9, 9, 148)">
+        <div class="navbar-brand d-flex flex-grow-1">
+            <a title="Page Principale" aria-label="Retour vers Page Principale" href="index.html">
+                <img src="public/logo.svg" alt="site's Logo" width="90" height="72"
+                    class="d-inline-block align-text-top">
+            </a>
+
+        </div>
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex flex-grow-1">
+            <p class="h1 text-white">Mon Blog : Article</p>
+        </div>
+
+        <a class=" btn btn-light me-auto mb-2 mb-lg-0" href="login.html">
+          Se connecter
+        </a>
+      </header>
+    
+<main class="container mt-5 mb-5 justify-content-center" style="min-height: 100vh;">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active"><a href="index.html">Page de Blog</a></li>
+        </ol>
+      </nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Page de Blog</a></li>
+          <li class="breadcrumb-item active" ><a href="login.html">Page de connexion</a></li>
+        </ol>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Page de Blog</a></li>
+          <li class="breadcrumb-item active" ><a href="article.html">Page d'article</a></li>
+        </ol>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Page de Blog</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="plan.html">Plan du site</a></li>
+        </ol>
+      </nav>
+      
+</main>
+
+<footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top" style="background:rgb(9, 9, 148)">
+  <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+  <a
+  title="Page Principale"  class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img  src="public/logo.svg" alt="site's Logo" width="72" height="57" class="d-inline-block align-text-top">
+  </a>
+  <nav style="display: contents;">
+  <ul class="nav col-md-4 text-white justify-content-end">
+      <li class="text-white"><a href="login.html" class="text-white px-2 ">page de connexion</a></li>
+      <li class="text-white"><a href="index.html" class="text-white px-2 ">page de menu</a></li>
+      <li class="text-white"><a href="article.html" class="text-white px-2 ">page d'article</a></li>
+      <li class="text-white"><a href="plan.html" style="
+        text-decoration: underline;
+    " class="text-white px-2 ">plan du site</a></li>
+  </ul>
+  </nav>
+</footer>
+</body>
+</html>
