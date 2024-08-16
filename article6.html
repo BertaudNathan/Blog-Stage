@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Page d'article contenant son titre , sa description, un tableau de données et des commentaires">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/877d2cecdc.js" crossorigin="anonymous"></script>
+
+    <title>Projet : petits projets et résolutions de problèmes</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md" style="
+    justify-content: space-between; background:#ec7123">
+        <i data-toggle="collapse" onclick="openNav()" data-target="#sidebar" aria-controls="sidebar"
+            aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars"
+            style="color: white;font-size: 30px;"></i>
+
+        <!-- give the boostrap class to the next div to align it to the right of the nav-->
+        <div class="navbar-text d-flex ">
+            <p class="h1 text-white">Projet : petits projets et résolutions de problèmes</p>
+        </div>
+        <div>
+            <a href="https://github.com/BertaudNathan?tab=repositories" class="text-white"><i class="fab fa-github"
+                    style="font-size: 30px;"></i></a>
+        </div>
+
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="article1.html">Presentation de Koalys</a>
+        <a href="article2.html">Presentation des technologies</a>
+        <a href="article3.html">Presentation des outils</a>
+        <a href="article4.html">Calendrier des rendez-vous</a>
+        <a href="article5.html">Fichiers dans la base Interlocuteurs</a>
+        <a href="article6.html">Petits projets</a>
+        <a href="article7.html">Bilan</a>
+    </div>
+    <main class="container mt-5 mb-5">
+        <h1 class="text-center">Projet : petits projets et résolutions de problèmes</h1>
+        <article class="card md-5 p-2 border-black rounded shadow pb-2 pt-3">
+
+
+            <p>
+                Parmis les différents tickets mantis, beaucoup sont des petits projets ou correctifs à faire.
+
+                J'en ai fait quelques- uns, parmi lesquels je peux présenter les plus intéressants.</p>
+            <p>
+
+                Il existe un module, diagmap, qui présente une carte avec les différents cabinets, leurs zones
+                d'interventions, de prospect, …, sur le territoire français. Ce module utilise l'api googlemap
+                javascript, qui a récemment été mise à jour. La récente mise a jour a apporté des conflits qui font que
+                la page ne charge plus.
+                Je remarque que le soucis se situe sur un de nos imports, prototype.js qui a pour but de définir des
+                fonctions javascript native pour des anciens navigateurs. Cet import réécrit donc des méthodes de
+                javascript que google map utilise, ce qui fait que plus rien marche.
+                Après avoir réglé le problème en supprimant l'import qui ne servait dans tous les cas plus à rien, un
+                deuxième problème apparaît : Les marqueurs n'apparaissent plus sur la carte.
+                Je met à jour notre utilisation des marqueurs pour le nouveau système de marqueurs, car les anciens sont
+                dépréciés.
+                Un dernier problème apparaît, Il y a des trous dans notre carte, ou certains codes postaux qui devraient
+                être colorés ne le sont pas. Le problème vient de notre script php qui récupère les coordonnées depuis
+                notre base de donnée, qui effectue un split dans les coordonnée avec le mauvais séparateur, ce qui fait
+                que certains points des polygones à colorier ont un point-virgule dans la coordonnée, donc la création
+                du polygone ne se fait pas.
+            </p>
+            <p>
+                Une fois le module réparé, on obtient le résultat suivant : </p>
+            <img src="public/diagmap.png" alt="image de diagmap fonctionnel">
+            <p>
+                Le deuxième petit projet est une api d'envoi de mail simple, avec pièce jointe par lien ou par fichier
+                directement. Le logiciel terrain pour les devis effectue des envois de mail (par exemple un envoi de
+                mail pour notifier que le dossier est en ligne,...) , ce qui est lourd et peut être long. L'objectif ici
+                est de lui faciliter la tâche en ayant juste un appel api a faire.
+                Pour cela, je crée la route dans les webservice, j'y implémente les différentes conditions et sécurités
+                (pour éviter que n'importe qui connaissant la route l'utilise pour envoyer des mails), les retours avec
+                les codes de succès et d'erreurs.
+            </p>
+            <p>
+                Un troisième projet est un système d'inscription et de désinscription automatiques pour les nouveaux
+                franchisés et pour ceux qui quittent le réseau, des listes de mails, et des listes de SMS. On utilise
+                ces listes pour tenir les franchisés au courant, par exemple de perturbation du système, de maintenance,
+                de nouveautés,...
+
+                J'ajoute donc des appels api mailjet et SMSmode à l'ajout et au retrait des franchisés dans le
+                controller, et j'ajoute également les boutons nécessaires dans le super Admin pour le faire à la main et
+                pour voir qui est inscrit ou pas.
+            </p>
+            <p>
+                Deux autres exemples de projets annexes similaires font intervenir des services extérieurs, en
+                l'occurrence hotjar et termly.
+            </p>
+            <ul>
+                <li>
+                    Hotjar permet de récolter les données de navigation des utilisateurs du site, pour comprendre leur
+                    manière de naviguer sur le site est de créer des statistiques.
+                </li>
+                <li>
+                    Termly est une consent management platform, une plateforme qui gère les cookies, les données
+                    récoltées, … Elle a l'avantage d'être certifiée par google, ce qui a des avantages pour les
+                    publicités ciblées notamment.
+                </li>
+            </ul>
+            <p>
+
+                Ces deux services s'implantent de la même manière. Il fournit un bout de code javascript à ajouter dans
+                les pages web ou on veut que le service fasse effet.
+
+                Pour les ajouter efficacement, j'utilise le système d'inclusion des blade laravel, pour créer un seul
+                fichier qui va s'inclure dans toutes les autres vues.
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        jQuery.fn.tagName = function () {
+            return this.prop("tagName");
+        };
+
+        var opened = false;
+        function openNav() {
+            document.getElementById("mySidebar").style.borderRight = "1px solid white";
+            document.getElementById("mySidebar").style.width = "250px";
+
+            console.log(opened);
+            opened = true;
+
+        }
+
+        function closeNav() {
+
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mySidebar").style.borderRight = "none";
+            console.log(opened);
+            opened = false;
+
+        }
+
+        $(document).ready(function () {
+
+            $("main").on('click', function () {
+                if (opened == true) {
+                    closeNav();
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+<footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
+        style="background:#ec7123">
+        <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+        <nav style="display: contents;">
+            <ul class="nav col-md-4 text-white justify-content-end">
+                <li class="text-white"><a href="index.html" style="
+        text-decoration: underline;
+    " class="text-white px-2 ">page de menu</a></li>
+                <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
+                <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+                <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+                <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+                <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+                <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+                <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+                <li class="text-white"><a href="article7.html" class="text-white px-2 ">Bilan</a></li>
+            
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
