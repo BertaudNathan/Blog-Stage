@@ -18,9 +18,13 @@
 <body>
     <header class="navbar navbar-expand-md" style="
     justify-content: space-between; background:#ec7123">
+    <div>
         <i data-toggle="collapse" onclick="openNav()" data-target="#sidebar" aria-controls="sidebar"
             aria-expanded="false" aria-label="Toggle navigation" class="fa-solid fa-bars"
             style="color: white;font-size: 30px;"></i>
+
+        <a href="index.html" style="color: white;font-size: 30px;"><i class="fa-solid fa-home"></i></a>
+    </div>
 
         <!-- give the boostrap class to the next div to align it to the right of the nav-->
         <div class="navbar-text d-flex ">
@@ -130,7 +134,7 @@
             </div>
             <div class="col-md-4">
                 <a href="article5.html">
-                    <img src="public/fichier.png" blog-img rounded shadow-lg" alt="article image"
+                    <img src="public/fichier.png" class="blog-img rounded shadow-lg" alt="article image"
                         style="max-width: 100%">
                 </a>
             </div>
@@ -141,13 +145,14 @@
             <div class="col-md-8">
                 <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Projet</p>
                 <h3 class="blog-title h3">Petits projets</h3>
-                <p class="blog-description text-secondary"> Petits projets, correction de problèmes, ... &nbsp;<a href="article6.html" style="color:#ec7123">Lire plus</a>
+                <p class="blog-description text-secondary"> Petits projets, correction de problèmes, ... &nbsp;<a
+                        href="article6.html" style="color:#ec7123">Lire plus</a>
                 </p>
 
             </div>
             <div class="col-md-4">
                 <a href="article6.html">
-                    <img src="public/diagmap.png" blog-img rounded shadow-lg" alt="article image"
+                    <img src="public/diagmap.png" class="blog-img rounded shadow-lg" alt="article image"
                         style="max-width: 100%">
                 </a>
             </div>
@@ -158,13 +163,14 @@
             <div class="col-md-8">
                 <p class="h6 blog-category text-uppercase" aria-label="category" style="color: #ec7123;">Projet</p>
                 <h3 class="blog-title h3">Bilan de stage</h3>
-                <p class="blog-description text-secondary"> Bilan de mon stage et transition vers l'alternance &nbsp;<a href="article7.html" style="color:#ec7123">Lire plus</a>
+                <p class="blog-description text-secondary"> Bilan de mon stage et transition vers l'alternance &nbsp;<a
+                        href="article7.html" style="color:#ec7123">Lire plus</a>
                 </p>
 
             </div>
             <div class="col-md-4">
                 <a href="article7.html">
-                    <img src="public/fichier.png" blog-img rounded shadow-lg" alt="article image"
+                    <img src="public/alternance.jpeg" class="blog-img rounded shadow-lg" alt="article image"
                         style="max-width: 100%">
                 </a>
             </div>
@@ -219,26 +225,29 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top"
-    style="background:#ec7123">
-    <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
-    <nav style="display: contents;">
-        <ul class="nav col-md-4 text-white justify-content-end">
-            <li class="text-white"><a href="index.html" style="
-    text-decoration: underline;
-" class="text-white px-2 ">page de menu</a></li>
-            <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
-            <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
-            <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
-            <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
-            <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
-            <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
-            <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
-            <li class="text-white"><a href="article7.html" class="text-white px-2 ">Bilan</a></li>
-        
-        </ul>
-    </nav>
-</footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer class="d-flex text-white flex-wrap justify-content-between align-items-center py-3 border-top" style="background:#ec7123;     position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;">
+        <p class="col-md-4 mb-0 ">Par Nathan Bertaud</p>
+        <nav style="display: contents;">
+            <ul class="nav col-md-4 text-white justify-content-end">
+                <li class="text-white"><a href="index.html" style="
+        text-decoration: underline;
+    " class="text-white px-2 ">page de menu</a></li>
+                <li class="text-white"><a href="a-propos.html" class="text-white px-2 ">A propos</a></li>
+                <li class="text-white"><a href="article1.html" class="text-white px-2 ">article 1</a></li>
+                <li class="text-white"><a href="article2.html" class="text-white px-2 ">article 2</a></li>
+                <li class="text-white"><a href="article3.html" class="text-white px-2 ">article 3</a></li>
+                <li class="text-white"><a href="article4.html" class="text-white px-2 ">article 4</a></li>
+                <li class="text-white"><a href="article5.html" class="text-white px-2 ">article 5</a></li>
+                <li class="text-white"><a href="article6.html" class="text-white px-2 ">article 6</a></li>
+                <li class="text-white"><a href="article7.html" class="text-white px-2 ">Bilan</a></li>
+
+            </ul>
+        </nav>
+    </footer>
 
 </body>
 
